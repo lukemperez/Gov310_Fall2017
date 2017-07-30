@@ -1,6 +1,11 @@
 .PHONY: all assignments slides notes video_list
 all: slides assignments notes video_list
 
+test: *.md
+	pandoc 2017_Perez_Gov310_Syllabus.md \
+	--latex-engine=xelatex -s -S \
+	-o test.pdf && open test.pdf
+
 # assignments
 # assignments: Assignments/CE0.pdf Assignments/CE1.pdf Assignments/CE2.pdf Assignments/CE4.pdf Assignments/CE5.pdf
 #
